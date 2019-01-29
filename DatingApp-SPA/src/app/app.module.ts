@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 
 
@@ -24,7 +25,8 @@ import { RegisterComponent } from './register/register.component';
       FormsModule
    ],//svidodatniimportiseovdjezabiljezavaju\\nFormsModule
    providers: [
-      AuthService//sviservicesdodaniseovdjzabiljezavaju
+      AuthService,//sviservicesdodaniseovdjzabiljezavaju
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
